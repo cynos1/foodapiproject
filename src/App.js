@@ -15,6 +15,8 @@ function App() {
     setrecipes(result.data.hits); //hits is an array of object in the url
     console.log(result.data)
   }
+  
+  
 
   const onSubmit = (e) =>{ //prevents page reload each time we click the submit button
     e.preventDefault();
