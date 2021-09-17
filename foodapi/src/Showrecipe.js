@@ -5,7 +5,7 @@ export default function Showrecipe({recipe}) {
         recipe["recipe"]["image"].match(/\.(jpeg|jpg|gif|png)$/) != null &&
         (
         <div className="showrecipe-display" onClick={()=> window.open(recipe["recipe"]["url"])}>
-            <img src={recipe["recipe"]["image"]} alt={recipe["recipe"]["label"]}/>
+            <img src={recipe["recipe"]["image"]} alt={recipe["recipe"]["label"]} className="images"/>
             <p>{recipe["recipe"]["label"]}</p>
         </div>
         )

@@ -2,13 +2,12 @@ import React, {useState} from 'react';
 import './App.css';
 import Axios from "axios";
 import Showrecipe from './Showrecipe';
-import Card from '@mui/material/Card';
-// import CardHeader from '@mui/material/CardHeader';
+
 
 function App() {
   const [query, setquery] = useState("");
   const [recipes, setrecipes] = useState([]);//saves the data gotten by axios here
-  const [healthLabel, sethealthLabel] = useState("vegan");
+  const [healthLabel] = useState("vegan");
   const url = `https://api.edamam.com/search?q=${query}&app_id=afcb8dcf&app_key=61fbfa8fb688e3313de3c286808803e6&
   &&health=${healthLabel}`;
 
@@ -26,12 +25,12 @@ function App() {
   }
 
   return (
-    <Card>
+    
     <div className="app">
-      <h1>Food recipe Plaza</h1>
+      <h1 className="header">Food recipe Plaza</h1>
       <form className="form" onSubmit={onSubmit}>
-          <input type="text" placeholder="enter Ingredient" value ={query} onChange={(e)=> setquery(e.target.value)}/>
-          <input type="submit" value="Search"/>
+          <input className="input" type="text" placeholder="enter Ingredient" value ={query} onChange={(e)=> setquery(e.target.value)}/>
+          <input type="submit" value="Search" className="search"/>
 
           {/* dropdown */}
           {/* <select className="app-healthlabels">
@@ -46,6 +45,7 @@ function App() {
 
           </select> */}
       </form>
+      <br/>
       <div>
         {recipes.map((x)=>{
           return (
@@ -60,7 +60,7 @@ function App() {
         })}
       </div>
     </div>
-    </Card>
+    
   )
 }
 
