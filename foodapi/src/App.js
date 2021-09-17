@@ -46,6 +46,7 @@ function App() {
           </select> */}
       </form>
       <br/>
+      <em>Click on the images to view the recipes.</em>
       <div>
         {recipes.map((x)=>{
           return (
