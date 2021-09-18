@@ -1,11 +1,26 @@
+*{
+    box-sizing: border-box;
+}
 .showrecipe-display{
-    flex:33.33%;
-    padding: 5px;
+    /* flex:50%; */
+    padding: 0 4px;
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+ }
+
+.column{
+    width:50%;
+    float: left;
+    padding:10px;
 }
-.images{
-   display: flex;
+.column .images{
+   margin-top: 12px;
+   vertical-align: middle;
 }
-images:hover{
-    cursor: pointer;
-    width: 100%;
+.showrecipe-display:after{
+    content: "";
+    display: flex;
+    clear: both;
 }
