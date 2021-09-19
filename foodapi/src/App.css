@@ -1,20 +1,36 @@
-.app{
-    max-width: 1500px;
-    width: 700px;
-    border: 1px solid;
+
+.app:hover .input{
+    width:230px;
+    background: white;
     border-radius: 10px;
-    margin:0 auto;
-    background:darksalmon;
-    padding: 100px;
-    box-shadow: 3px 7px 5px rgb(143, 92, 109);
+}
+.icon{
+    position: relative;
+    top:50%;
+    right:40px;
+    bottom: -20px;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    transition: .2s;
+}
+.form:hover .icon{
+    opacity: 0;
+    z-index: -999;
 }
 .header{
     text-align: center;
     color:green;
 }
 .form{
+    max-width: 1500px;
+    width: 700px;
     text-align: center;
-    
+    margin:0 auto;
+    background:darksalmon;
+    border: 1px solid;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 3px 7px 5px rgb(143, 92, 109);
     
 }
 .search{
@@ -22,15 +38,26 @@
     height:35px;
     background-color: blanchedalmond;
     border: 2px solid green;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(80, 52, 9);
 }
 .input{
-    width:200px;
-    height:29px;
+    width:80px;
+    padding: 10px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 26px;
     border: 2px solid green;
     background-color:blanchedalmond;
-    
+    transition: .5s;
 }
 .center{
     text-align: center;
     margin:0 auto;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }

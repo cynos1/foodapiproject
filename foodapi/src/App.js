@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Axios from "axios";
 import Showrecipe from './Showrecipe';
-
+import {FaSearch} from 'react-icons/fa'
 
 function App() {
   const [query, setquery] = useState("");
@@ -27,39 +27,26 @@ function App() {
   return (
     
     <div className="app">
-      <h1 className="header">Food recipe Plaza</h1>
+      
       <form className="form" onSubmit={onSubmit}>
-          <input className="input" type="text" placeholder="enter Ingredient" value ={query} onChange={(e)=> setquery(e.target.value)}/>
-          <input type="submit" value="Search" className="search"/>
-
-          {/* dropdown */}
-          {/* <select className="app-healthlabels">
-            <option onClick={()=> sethealthLabel("vegan")}>vegan</option>
-            <option onClick={()=> sethealthLabel("vegetarian")}>vegetarian</option>
-            <option onClick={()=> sethealthLabel("paleo")}>paleo</option>
-            <option onClick={()=> sethealthLabel("dairy-free")}>dairy-free</option>
-            <option onClick={()=> sethealthLabel("gluten-free")}>gluten-free</option>
-            <option onClick={()=> sethealthLabel("wheat-free")}>wheat-free</option>
-            <option onClick={()=> sethealthLabel("egg-free")}>egg-free</option>
-            <option onClick={()=> sethealthLabel("low-sugar")}>low-sugar</option>
-
-          </select> */}
-      </form>
-      <br/>
-      {/* <em className="center">Click on the images to view the recipes.</em> */}
-      <div>
+      <h1 className="header">Food recipes</h1>
+          <input className="input" type="text" value ={query} onChange={(e)=> setquery(e.target.value)}/>
+          <FaSearch className="icon"/>
+          <input type="submit" value="Enter" className="search"/>
+        <hr/>
+        <br/>
+          <div className="row">
         {recipes.map((x)=>{
           return (
-            // <div>
-            //     <p>{x["recipe"]["label"]}</p>
-            //     <img src={x["recipe"]["image"]} alt={x["recipe"]["label"]}/>
-            // </div>
-            //commented out to display the recipe in a different component
             <Showrecipe recipe = {x}/>
           )
           
         })}
       </div>
+      </form>
+      <br/>
+     
+     
     </div>
     
   )
