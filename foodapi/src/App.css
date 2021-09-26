@@ -1,4 +1,14 @@
+.app{
+    background-image: url("https://cdn.pixabay.com/photo/2016/12/10/21/26/food-1898194_1280.jpg");
+    background-size: cover;
+    background-repeat:repeat;
+    height:1020px;
+    top: 50%;
+    left: 50%;
+    padding: 10px;
+    
 
+}
 .app:hover .input{
     width:230px;
     background: white;
@@ -22,11 +32,14 @@
     color:green;
 }
 .form{
-    max-width: 1500px;
-    width: 700px;
+    /* max-width: 1500px; */
+    /* width: 700px; */
+    width: 90%;
+    padding: 10px;
+    vertical-align: middle;
     text-align: center;
     margin:0 auto;
-    background:darksalmon;
+    background:white;
     border: 1px solid;
     border-radius: 10px;
     height: fit-content;
@@ -57,7 +70,7 @@
 }
 .row{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
 }
